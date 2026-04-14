@@ -9,6 +9,10 @@
 # --------------------
 # Variables are used when you want to store, reference, or manipulate information, and to provide clarity
 # and readability to your code
+# To get the values of variables, use a $ followed by the variable name
+#	eg) variable='test'
+#		echo $variable
+#		OUTPUT -> test
 #
 # Types of variables:
 # --------------------
@@ -30,13 +34,21 @@
 #						in.
 #	Other types such as 'Static' exist, but they are used in coding languages other than Bash, so I will not go over them
 #
+# Environment variables are a distinct type that are predefined:
+#	Environment variables have names that are all uppercase, '$PATH' being an example
+#	Environment variables are passed through subshells by any parent processes, and they have a session-wide scope
+# 	They also are often dynamic, where the variable '$PATH' will change when you change the current path you are in
+#
 # Common mistakes:
 # --------------------
-# 
+# Trying to call variables without a dollar sign ($)
+# Fix: make sure to add a $ infront of all variable calls
 #
 # Extra info:
 # --------------------
-# 
+# Mr. Warren prefers the naming convention for variables to be 'snake_case' in Bash
+# 'snake_case' is when you define variables where the space is replaced by an underscore and all characters are undercase
+# DO NOT name variables with a number in the name; it looks weird and is bad practice
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
