@@ -7,7 +7,7 @@
 # When do we use them?
 # --------------------
 # We use quotes when we want to either make something readable to humans, or when we want to put a line of code into another command
-# but not use it yet.
+# but not use it yet
 #
 # Types of quotations:
 # --------------------
