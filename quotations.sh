@@ -35,8 +35,12 @@
 
 # COMMANDS TO DEMONSTRATE:
 # --------------------
-
+# You can put a string in either double or single quotes, both will provide the same result if it is just characters
 single_quote_string='This is a single quote string'
 double_quote_string="This is a double quote string"
 
-# You can put a string in either double or single quotes, both will provide the same result if it is just characters
+echo $single_quote_string # OUTPUT -> This is a single quote string
+echo $double_quote_string # OUTPUT -> This is a double quote string
+
+# You can also provide strings directly into a command like echo that accepts them
+echo "This is a string directly inputted into 'echo'"
