@@ -35,6 +35,9 @@
 
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+# You can also provide strings directly into a command like echo that accepts them
+echo "This is a string directly inputted into 'echo'"
+
 # You can put a string in either double or single quotes, both will provide the same result if it is just characters
 single_quote_string='This is a single quote string'
 double_quote_string="This is a double quote string"
@@ -42,5 +45,8 @@ double_quote_string="This is a double quote string"
 echo $single_quote_string # OUTPUT -> This is a single quote string
 echo $double_quote_string # OUTPUT -> This is a double quote string
 
-# You can also provide strings directly into a command like echo that accepts them
-echo "This is a string directly inputted into 'echo'"
+# When you try to do variable expansion, single quotes will NOT work
+echo 'Variable expansion with single quotes: $single_quote_string, $double_quote_string'
+# OUTPUT -> Variable expansion with single quotes: $single_quote_string, $double_quote_string
+echo "Variable expansion with double quotes: $single_quote_string, $double_quote_string"
+# OUTPUT -> Variable expansion with double quotes: This is a single quote string, This is a double quote string
