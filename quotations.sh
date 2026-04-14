@@ -32,7 +32,7 @@
 # --------------------
 # Because of overuse and unnecessary use of double quotes, people can break and abuse systems using command injection
 # Read command seems to return it in single quotes so it is realatively safe this way (from my understanding)
-
+#
 # COMMANDS TO DEMONSTRATE:
 # --------------------
 # You can also provide strings directly into a command like echo that accepts them
