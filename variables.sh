@@ -42,14 +42,34 @@
 # Common mistakes:
 # --------------------
 # Trying to call variables without a dollar sign ($)
-# Fix: make sure to add a $ infront of all variable calls
+#	eg)	variable="string"
+#		echo "my variable is a variable"
+#		OUTPUT -> my variable is a variable
+# Fix: add a dollar sign to the front a variable to get the value properly
+#	eg)	variable="string"
+#		echo "my variable is a $variable"
+#		OUTPUT -> my variable is a string
+# 
+# When you assign a value to a variable, you accidently use a space around the equal sign
+#	eg)	variable = "hello"
+# Fix: make sure there are spaces around the equal sign
+#	eg)	variable="hello"
 #
 # Extra info:
 # --------------------
 # Mr. Warren prefers the naming convention for variables to be 'snake_case' in Bash
 # 'snake_case' is when you define variables where the space is replaced by an underscore and all characters are undercase
 # DO NOT name variables with a number in the name; it looks weird and is bad practice
+# Variables can also be given a new value when they already have one
+# Some commands (like read, see user-input.sh for more info) allow a variable at the end to be defined to record the output
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
-#
+# Assigning to a variable and then echoing
+first_name='John'
+last_name='Doe'
+
+echo "Your full name is '$first_name $last_name'" # OUTPUT -> Your full name is 'John Doe'
+
+read -p 'You are now married to something, please input a new last name: ' new_name
+echo "Your new name is '$new_name'"
