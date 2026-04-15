@@ -31,7 +31,7 @@
 #	Local:				Variables defined within a block of code that are lost when the block finishes. You can create a local
 #						variable in bash by using the keyword 'local' before assigning a value for the variable, or you can use
 #						the 'declare' keyword. Local variables are not able to be used outside of whatever block they are defined
-#						in.
+#						in. *'block' refers to a function (a block of re-usable code)
 #	Other types such as 'Static' exist, but they are used in coding languages other than Bash, so I will not go over them
 #
 # Environment variables are a distinct type that are predefined:
