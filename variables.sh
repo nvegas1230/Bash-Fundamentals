@@ -68,8 +68,12 @@
 # Assigning to a variable and then echoing
 first_name='John'
 last_name='Doe'
-
 echo "Your full name is '$first_name $last_name'" # OUTPUT -> Your full name is 'John Doe'
 
+# Some commands allow you to define a variable and then it will assign the output to the variable
 read -p 'You are now married to something, please input a new last name: ' new_name
-echo "Your new name is '$new_name'"
+echo "Your new name is '$new_name'" # OUTPUT -> Your new name is '<whatever-user-inputted>'
+
+# You can reassign values to variables that already have values
+last_name=$new_name
+echo "Your full name is now '$first_name $last_name'" # OUTPUT -> Your full name is now 'John <whatever-user-inputted>'
