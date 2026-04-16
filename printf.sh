@@ -69,3 +69,11 @@
 #		OUTPUT ->	Hello
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+# Basic string printing
+printf "Hello, %s!\n" "John"   # OUTPUT -> Hello, John!
+
+# Printing multiple values
+name="Alice"
+age=30
+printf "Name: %s | Age: %d\n" "$name" "$age"
+# OUTPUT -> Name: Alice | Age: 30
