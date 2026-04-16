@@ -77,3 +77,21 @@ name="Alice"
 age=30
 printf "Name: %s | Age: %d\n" "$name" "$age"
 # OUTPUT -> Name: Alice | Age: 30
+
+# Formatting numbers
+pi=3.14159
+printf "Pi rounded to 2 decimals: %.2f\n" "$pi"
+# OUTPUT -> Pi rounded to 2 decimals: 3.14
+
+# Aligning text
+printf "%-10s %5s\n" "Item" "Price"
+printf "%-10s %5.2f\n" "Apple" 1.5
+# OUTPUT ->
+# Item       Price
+# Apple       1.50
+
+# Using escape characters
+printf "Line1\nLine2\n"
+# OUTPUT ->
+# Line1
+# Line2
