@@ -42,16 +42,21 @@
 # --------------------
 #
 # Using [] to test a condition
+echo 'Using [] for condition checking:'
 if [ 5 -gt 3 ]; then
 	echo "true" # OUTPUT -> true
 fi
 
 # Using [[]] to test a more advanced condition (like pattern matching)
-if [[ hello == *o ]]; then
+echo 'Using [[]] for advanced condition checking (like pattern matching):'
+if [[ 'hello' == *o ]]; then
 	echo "word has an 'o' in it" # OUTPUT -> word has an 'o' in it
 fi
 
+# Double brackets do expansion also
+
 # Using () to make a subshell
 # If you run this command not in a subshell, it will change your directory
-# Because it is run in a subshell, the cd will not change directory     
+# Because it is run in a subshell, the cd will not change directory
+echo 'Using () to make a :'
 (cd /; pwd) # OUTPUT -> /
