@@ -32,6 +32,7 @@
 # 	Forgetting semicolons inside {}
 # 	Confusing subshell () with grouping {}
 # 	Not using quotes around variables
+#	Trying to use () instead of $() to get output from subshell
 #
 # Extra info:
 # --------------------
@@ -40,3 +41,12 @@
 # COMMANDS TO DEMONSTRATE:
 # --------------------
 #
+# Using [] to test a condition
+if [ 5 -gt 3 ]; then
+	echo "true" # OUTPUT -> true
+fi
+
+# [[]] (advanced condition)
+if [[ hello == hello ]]; then
+	echo "words match" # OUTPUT -> words match
+fi
