@@ -43,13 +43,22 @@
 #
 # Using [] to test a condition
 echo 'Using [] for condition checking:'
-if [ 5 -gt 3 ]; then
+
+var_b='5 '
+
+if [ $var_b -gt 3 ]; then
 	echo "true" # OUTPUT -> true
 fi
 
 # Using [[]] to test a more advanced condition (like pattern matching)
 echo 'Using [[]] for advanced condition checking (like pattern matching):'
-if [[ 'hello' == *o ]]; then
+if [[ hello == *o ]]; then
+	echo "word has an 'o' in it" # OUTPUT -> word has an 'o' in it
+fi
+
+new_var="hello"
+
+if [ "$new_var" == *"o" ]; then
 	echo "word has an 'o' in it" # OUTPUT -> word has an 'o' in it
 fi
 
