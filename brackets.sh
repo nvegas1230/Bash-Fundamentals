@@ -46,7 +46,12 @@ if [ 5 -gt 3 ]; then
 	echo "true" # OUTPUT -> true
 fi
 
-# [[]] (advanced condition)
-if [[ hello == hello ]]; then
-	echo "words match" # OUTPUT -> words match
+# Using [[]] to test a more advanced condition (like pattern matching)
+if [[ hello == *o ]]; then
+	echo "word has an 'o' in it" # OUTPUT -> word has an 'o' in it
 fi
+
+# Using () to make a subshell
+# If you run this command not in a subshell, it will change your directory
+# Because it is run in a subshell, the cd will not change directory     
+(cd /; pwd) # OUTPUT -> /
