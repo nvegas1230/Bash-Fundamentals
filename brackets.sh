@@ -27,10 +27,12 @@
 #
 # Common mistakes:
 # --------------------
-# 	Missing spaces: [ "$a"="$b" ] (wrong)
-# 	Using [ ] instead of [[ ]] for patterns
-# 	Forgetting semicolons inside {}
-# 	Confusing subshell () with grouping {}
+# 	Using single equals for comparing: [ "$a" == "$b" ]
+#		Fix: use double equal signs eg) [ "$a" == "$b" ]
+# 	Using [ ] for complex patterns: [ hello == *o ]
+#		Fix: switch to double brackets eg) [[ hello == *o ]]
+# 	Confusing subshell () with grouping {}: var=${command}
+#		Fix:
 # 	Not using quotes around variables
 #	Trying to use () instead of $() to get output from subshell
 #
