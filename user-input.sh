@@ -66,3 +66,26 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+# Basic user input
+read -p "Enter your name: " name
+echo "Hello, $name!"
+
+# Silent input (password)
+read -s -p "Enter your password: " password
+echo
+echo "Password received (hidden for security)"
+
+# Multiple inputs *will only split up the first part, any other spaces will be added to last variable
+read -p "Enter your first and last name: " first last
+echo "First: $first, Last: $last"
+
+# Conditional use with input
+read -p "Do you play / have you heard of brawl stars? (yes/no): " answer
+if [ "$answer" = "yes" ]; then
+    echo 'Nice'
+elif [ "$answer" = "no" ]; then
+    echo 'You should try it!'
+else
+    echo "You didnt give me a valid answer (aw man)"
+fi
