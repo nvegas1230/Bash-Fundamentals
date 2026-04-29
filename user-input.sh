@@ -2,9 +2,9 @@
 
 # What is user input?
 # --------------------
-# User input is any data provided by a user while a script is running.
+# User input is any data provided by a user while a script is running
 # In Bash, this is commonly done using the 'read' command, which allows
-# the script to pause and wait for the user to type something.
+# the script to pause and wait for the user to type something
 #
 # Types of user input:
 # --------------------
@@ -30,12 +30,30 @@
 #
 # When do we use it?
 # --------------------
-# User input is used whenever you want interaction in your script.
+# User input is used whenever you want interaction in your script
 # This includes:
+# 	Asking users for names, numbers, or choices
+# 	Menu systems
+# 	Password prompts
+# 	Configuring scripts dynamically
 #
 # Common mistakes:
 # --------------------
-# 
+# Not quoting variables
+#   eg) if [ $input = yes ]
+#   Fix: if [ "$input" = "yes" ]
+# Forgetting variable name
+#   eg) read
+#   Fix: read input
+# Using numeric comparison on strings
+#   eg) [ "$input" -eq "hello" ]
+#   Fix: use = for strings → [ "$input" = "hello" ]
+# Overwriting variables unintentionally
+#   eg) read input (used multiple times without meaning to)
+#	Fix: ensure that input is not used again as a variable name if not immediately checked
+# Not handling empty input
+#   eg) user presses enter without typing anything
+#	Fix: add an else statement or check if the input is invalid
 #
 # Extra info:
 # --------------------
