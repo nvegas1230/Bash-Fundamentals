@@ -27,14 +27,19 @@
 #
 # Common mistakes:
 # --------------------
-# 	Using single equals for comparing: [ "$a" == "$b" ]
-#		Fix: use double equal signs eg) [ "$a" == "$b" ]
-# 	Using [ ] for complex patterns: [ hello == *o ]
-#		Fix: switch to double brackets eg) [[ hello == *o ]]
-# 	Confusing subshell () with grouping {}: var=${command}
-#		Fix:
-# 	Not using quotes around variables
+# 	Using single equals for comparing instead of double equals
+#		eg) [ "$a" = "$b" ]
+#		Fix: [ "$a" == "$b" ]
+# 	Using [ ] for complex patterns instead of [[]]
+#		eg) [ hello == *o ]
+#		Fix: [[ hello == *o ]]
+# 	Confusing subshell () with grouping {}
+#		eg) var=${command}
+#		Fix: $(command)
 #	Trying to use () instead of $() to get output from subshell
+#		eg) var=(command) (will error)
+#		Fix: var=$(command)
+#
 #
 # Extra info:
 # --------------------
