@@ -78,3 +78,13 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+# Demonstrating some conditionals and their use case:
+read -p "Input the number 1 or 2" input
+if [ "$input" -eq 1 ]; then
+	echo 'You inputted 1'
+elif [ "$input" -eq 2 ]; then
+	echo 'You inputted 2!'
+else
+	echo "You inputted $input, which is not one of the options I gave >:("
+fi
