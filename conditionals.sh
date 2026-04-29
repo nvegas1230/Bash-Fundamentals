@@ -80,7 +80,7 @@
 # --------------------
 
 # Demonstrating some conditionals and their use case:
-read -p "Input the number 1 or 2" input # This will get their input
+read -p "Input the number 1 or 2: " input # This will get their input
 if [ "$input" -eq 1 ]; then # An initial 'if' to check if input is 1
 	echo 'You inputted 1'
 elif [ "$input" -eq 2 ]; then # Another 'elif' to check if input is 2 when it isnt 1
