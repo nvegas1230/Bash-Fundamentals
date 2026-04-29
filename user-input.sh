@@ -57,7 +57,12 @@
 #
 # Extra info:
 # --------------------
-# 
+# If no variable is provided, input is stored in the default variable $REPLY
+# eg) read
+#     echo "$REPLY"
+# You can read multiple values at once:
+# eg) read first last
+#     (user types: John Doe → first=John, last=Doe)
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
