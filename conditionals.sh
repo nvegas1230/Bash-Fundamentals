@@ -34,11 +34,13 @@
 #
 # When do we use them?
 # --------------------
-# 
+# Conditionals are used anytime you need to check a condition
+# This is useful for user input, pattern matching, looking for files, and much more
+# Conditionals are extremely important and will dictate the execution of a script
 #
 # Common mistakes:
 # --------------------
-# 	
+# Using lots of elifs to check multiple conditions that are independant of eachother
 #
 # Extra info:
 # --------------------
