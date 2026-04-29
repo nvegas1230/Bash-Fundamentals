@@ -80,11 +80,11 @@
 # --------------------
 
 # Demonstrating some conditionals and their use case:
-read -p "Input the number 1 or 2" input
-if [ "$input" -eq 1 ]; then
+read -p "Input the number 1 or 2" input # This will get their input
+if [ "$input" -eq 1 ]; then # An initial 'if' to check if input is 1
 	echo 'You inputted 1'
-elif [ "$input" -eq 2 ]; then
+elif [ "$input" -eq 2 ]; then # Another 'elif' to check if input is 2 when it isnt 1
 	echo 'You inputted 2!'
-else
+else # If the input is something else entirely (the 2 conditionals above don't run), it will resort to this
 	echo "You inputted $input, which is not one of the options I gave >:("
 fi
