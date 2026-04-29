@@ -26,9 +26,10 @@
 #					echo "this will not run"
 #				elif [ $var -eq 3 ]; then
 #					echo "above is not true AND this is not true, not running"
-#				fi
 #				elif [ $var -eq 1 ]; then
-#					echo "both above are not true, running this isntead"
+#					echo "both above are not true, running this instead"
+#				elif [ $var -eq 3 ]; then
+#					echo "above has already run so this will not be run, regardless of if it is true"
 #				fi
 #
 # When do we use them?
