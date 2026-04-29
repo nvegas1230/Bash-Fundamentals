@@ -45,29 +45,19 @@
 #
 # Using [] to test a condition
 echo 'Using [] for condition checking:'
-
-var_b='5 '
-
+var_b=5
 if [ $var_b -gt 3 ]; then
-	echo "true" # OUTPUT -> true
+	echo "[ $var_b -gt 3 ] is true" # OUTPUT -> [ 5 -gt 3 ] is true
 fi
 
 # Using [[]] to test a more advanced condition (like pattern matching)
 echo 'Using [[]] for advanced condition checking (like pattern matching):'
 if [[ hello == *o ]]; then
-	echo "word has an 'o' in it" # OUTPUT -> word has an 'o' in it
+	echo "word 'hello' has an 'o' in it" # OUTPUT -> word has an 'o' in it
 fi
-
-new_var="hello"
-
-if [ "$new_var" == *"o" ]; then
-	echo "word has an 'o' in it" # OUTPUT -> word has an 'o' in it
-fi
-
-# Double brackets do expansion also
 
 # Using () to make a subshell
 # If you run this command not in a subshell, it will change your directory
 # Because it is run in a subshell, the cd will not change directory
-echo 'Using () to make a :'
+echo 'Using () to make a subshell and switch to root directory:'
 (cd /; pwd) # OUTPUT -> /
