@@ -63,6 +63,8 @@
 # You can read multiple values at once:
 # eg) read first last
 #     (user types: John Doe → first=John, last=Doe)
+# Most common way to get user input is using the read command
+# eg) read test (prompts user to type and then assigns to variable test)
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
