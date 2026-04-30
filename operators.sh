@@ -74,3 +74,32 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+# A ton of conditionals to demonstrate the numeric operators (-eq, -lt, etc.)
+# Putting in characters other than numbers will error
+read -p "Enter first number: " var1
+read -p "Enter second number: " var2
+
+if [ "$var1" -eq "$var2" ]; then
+    echo "Equal"
+fi
+
+if [ "$var1" -ne "$var2" ]; then
+    echo "Not equal"
+fi
+
+if [ "$var1" -lt "$var2" ]; then
+    echo "$var1 is less than $var2"
+fi
+
+if [ "$var1" -le "$var2" ]; then
+    echo "$var1 is less than or equal to $var2"
+fi
+
+if [ "$var1" -gt "$var2" ]; then
+    echo "$var1 is greater than $var2"
+fi
+
+if [ "$var1" -ge "$var2" ]; then
+    echo "$var1 is greater than or equal to $var2"
+fi
