@@ -103,3 +103,32 @@ fi
 if [ "$var1" -ge "$var2" ]; then
     echo "$var1 is greater than or equal to $var2"
 fi
+
+# A ton of conditionals to demonstrate the string operators (==, >, -z, etc.)
+read -p "Enter first string: " str1
+read -p "Enter second string: " str2
+
+if [ "$str1" == "$str2" ]; then
+    echo "Strings are equal"
+fi
+
+if [ "$str1" != "$str2" ]; then
+    echo "Strings are not equal"
+fi
+
+if [ -z "$str1" ]; then
+    echo "First string is empty"
+fi
+
+if [ -n "$str1" ]; then
+    echo "First string is NOT empty"
+fi
+
+# Alphabetical comparison (ASCII-based)
+if [[ "$str1" > "$str2" ]]; then
+    echo "$str1 comes after $str2 alphabetically"
+fi
+
+if [[ "$str1" < "$str2" ]]; then
+    echo "$str1 comes before $str2 alphabetically"
+fi
