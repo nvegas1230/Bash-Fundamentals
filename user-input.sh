@@ -8,31 +8,31 @@
 #
 # Types of user input:
 # --------------------
-# 1) Basic input
-#    Stores input into a variable
-#    eg) read name
+# Basic input
+#   Stores input into a variable
+#   eg) read name
 #
-# 2) Prompted input (-p)
-#    Displays a message before accepting input
-#    eg) read -p "Enter your name: " name
+# Prompted input (-p)
+#   Displays a message before accepting input
+#   eg) read -p "Enter your name: " name
 #
-# 3) Silent input (-s)
-#    Hides input (useful for passwords)
-#    eg) read -s password
+# Silent input (-s)
+#   Hides input (useful for passwords)
+#   eg) read -s password
 #
-# 4) Timed input (-t)
-#    Waits a certain number of seconds before timing out
-#    eg) read -t 5 input
+# Timed input (-t)
+#   Waits a certain number of seconds before timing out
+#   eg) read -t 5 input
 #
-# 5) Limited input (-n)
-#    Reads only a specific number of characters
-#    eg) read -n 1 choice
+# Limited input (-n)
+#   Reads only a specific number of characters
+#   eg) read -n 1 choice
 #
 # When do we use it?
 # --------------------
 # User input is used whenever you want interaction in your script
 # This includes:
-# 	Asking users for names, numbers, or choices
+#   Asking users for names, numbers, or choices
 # 	Menu systems
 # 	Password prompts
 # 	Configuring scripts dynamically
