@@ -147,3 +147,19 @@ fi
 if [[ ! "$num" -eq 10 ]]; then
     echo "$num is NOT equal to 10"
 fi
+
+# Arithmetic operators demonstration
+read -p "Enter first number for arithmetic: " a
+read -p "Enter second number for arithmetic: " b
+
+echo "Addition: $((a + b))"
+echo "Subtraction: $((a - b))"
+echo "Multiplication: $((a * b))"
+
+if [ "$b" -ne 0 ]; then
+    echo "Division: $((a / b))"
+    echo "Modulus: $((a % b))"
+else
+    echo "Cannot divide by zero"
+fi
+
