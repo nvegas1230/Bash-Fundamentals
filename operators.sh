@@ -75,7 +75,7 @@
 # COMMANDS TO DEMONSTRATE:
 # --------------------
 
-# A ton of conditionals to demonstrate the numeric operators (-eq, -lt, etc.)
+echo 'Numeric operators demonstration (-eq, -lt, etc.)'
 # Putting in characters other than numbers will error
 read -p "Enter first number: " var1
 read -p "Enter second number: " var2
@@ -104,7 +104,8 @@ if [ "$var1" -ge "$var2" ]; then
     echo "$var1 is greater than or equal to $var2"
 fi
 
-# A ton of conditionals to demonstrate the string operators (==, >, -z, etc.)
+echo
+echo 'String operators demonstration'
 read -p "Enter first string: " str1
 read -p "Enter second string: " str2
 
@@ -124,7 +125,6 @@ if [ -n "$str1" ]; then
     echo "First string is NOT empty"
 fi
 
-# Alphabetical comparison (ASCII-based)
 if [[ "$str1" > "$str2" ]]; then
     echo "$str1 comes after $str2 alphabetically"
 fi
@@ -133,7 +133,8 @@ if [[ "$str1" < "$str2" ]]; then
     echo "$str1 comes before $str2 alphabetically"
 fi
 
-# Logical operators demonstration (&&, ||, !)
+echo
+echo 'Logical operators demonstration (&&, ||, !)'
 read -p "Enter a number greater than 10: " num
 
 if [[ "$num" -gt 10 && "$num" -lt 20 ]]; then
@@ -148,7 +149,8 @@ if [[ ! "$num" -eq 10 ]]; then
     echo "$num is NOT equal to 10"
 fi
 
-# Arithmetic operators demonstration
+echo
+echo 'Arithmetic operators demonstration'
 read -p "Enter first number for arithmetic: " a
 read -p "Enter second number for arithmetic: " b
 
@@ -157,21 +159,27 @@ echo "Subtraction: $((a - b))"
 echo "Multiplication: $((a * b))"
 
 if [ "$b" -ne 0 ]; then
-    echo "Division: $((a / b))"
+    echo "Division (integer): $((a / b))"
+    echo "Division (using bc): $(echo "$a/$b" | bc -l)"
     echo "Modulus: $((a % b))"
 else
     echo "Cannot divide by zero"
 fi
 
-# File test operators demonstration
-read -p "Enter a file or directory path (~ for home): " path
+echo
+echo 'File test operators demonstration'
+read -p "Enter a file or directory path (/ is root): " path
 
 if [ -e "$path" ]; then
     echo "Path exists"
+else
+    echo "Path does not exist"
 fi
 
 if [ -f "$path" ]; then
     echo "It is a regular file"
+else
+    echo "File does not exist"
 fi
 
 if [ -d "$path" ]; then
@@ -189,3 +197,30 @@ fi
 if [ -x "$path" ]; then
     echo "It is executable"
 fi
+
+echo
+echo 'Pattern matching demonstration'
+read -p "Enter a filename: " filename
+
+if [[ "$filename" == *.txt ]]; then
+    echo "This is a .txt file"
+fi
+
+if [[ "$filename" == *.sh ]]; then
+    echo "This is a shell script"
+fi
+
+if [[ "$filename" == file? ]]; then
+    echo "Matches pattern 'file?' (file + one character)"
+fi
+
+if [[ "$filename" == *log* ]]; then
+    echo "Filename contains 'log'"
+fi
+
+echo
+echo 'AND (&&) / OR (||) outside brackets demonstration'
+
+read -p "Enter a number greater than 5: " num
+[ "$num" -gt 5 ] && echo "Number is greater than 5" # Command runs only if the first succeeds
+[ "$num" -gt 5 ] || echo "Number is NOT greater than 5" # Command runs only if the first fails
