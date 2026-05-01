@@ -132,3 +132,18 @@ fi
 if [[ "$str1" < "$str2" ]]; then
     echo "$str1 comes before $str2 alphabetically"
 fi
+
+# Logical operators demonstration (&&, ||, !)
+read -p "Enter a number greater than 10: " num
+
+if [[ "$num" -gt 10 && "$num" -lt 20 ]]; then
+    echo "$num is between 10 and 20"
+fi
+
+if [[ "$num" -lt 5 || "$num" -gt 15 ]]; then
+    echo "$num is either less than 5 OR greater than 15"
+fi
+
+if [[ ! "$num" -eq 10 ]]; then
+    echo "$num is NOT equal to 10"
+fi
