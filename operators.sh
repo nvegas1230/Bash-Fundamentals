@@ -163,3 +163,29 @@ else
     echo "Cannot divide by zero"
 fi
 
+# File test operators demonstration
+read -p "Enter a file or directory path (~ for home): " path
+
+if [ -e "$path" ]; then
+    echo "Path exists"
+fi
+
+if [ -f "$path" ]; then
+    echo "It is a regular file"
+fi
+
+if [ -d "$path" ]; then
+    echo "It is a directory"
+fi
+
+if [ -r "$path" ]; then
+    echo "It is readable"
+fi
+
+if [ -w "$path" ]; then
+    echo "It is writable"
+fi
+
+if [ -x "$path" ]; then
+    echo "It is executable"
+fi
