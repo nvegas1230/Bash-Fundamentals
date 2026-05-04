@@ -76,3 +76,82 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo "Case statement demonstration"
+read -p "Enter a number (1-3): " num
+
+case "$num" in
+    1)
+        echo "You entered one"
+        ;;
+    2)
+        echo "You entered two"
+        ;;
+    3)
+        echo "You entered three"
+        ;;
+    *)
+        echo "Invalid number"
+        ;;
+esac
+
+echo
+echo "Multiple options (|) demonstration"
+read -p "Enter y/n: " answer
+
+case "$answer" in
+    y|Y)
+        echo "You chose yes"
+        ;;
+    n|N)
+        echo "You chose no"
+        ;;
+    *)
+        echo "Unknown input"
+        ;;
+esac
+
+echo
+echo "Wildcard (?) demonstration"
+read -p "Enter a 3-letter word starting with a and ending with c: " word
+
+case "$word" in
+    a?c)
+        echo "Matches pattern a?c"
+        ;;
+    *)
+        echo "Does not match"
+        ;;
+esac
+
+echo
+echo "Fall-through (;&) demonstration"
+read -p "Enter a number (1 or 2): " val
+
+case "$val" in
+    1)
+        echo "This is case 1"
+        ;&
+    2)
+        echo "This runs for case 2 OR fall-through from 1"
+        ;;
+    *)
+        echo "Other value"
+        ;;
+esac
+
+echo
+echo "Continue matching (;;&) demonstration"
+read -p "Enter a word: that starts with a, or ends with z, or both: " text
+
+case "$text" in
+    a*)
+        echo "Starts with 'a'"
+        ;;&
+    *z)
+        echo "Ends with 'z'"
+        ;;&
+    *)
+        echo "This will always run if previous patterns matched with ;;& or if none matched"
+        ;;
+esac
