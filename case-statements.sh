@@ -69,7 +69,10 @@
 #
 # Extra info:
 # --------------------
-# 
+# Case statements use pattern matching, not strict equality checks
+# They are often faster and cleaner than multiple if/elif checks
+# Patterns can include wildcards like *, ?, and character ranges (e.g. [a-z])
+# Case statements are commonly used for menus, user input handling, and argument parsing
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
