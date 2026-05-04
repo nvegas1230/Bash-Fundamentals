@@ -38,7 +38,34 @@
 #
 # Common mistakes:
 # --------------------
-# 
+# Forgetting to close the case statement with 'esac'
+#	eg) case "$var" in
+#			1) echo "one" ;;
+#	Fix: add 'esac' at the end to properly close the statement
+#
+# Missing ';;' which can cause unintended fall-through behavior
+#	eg)	case "$var" in
+#			1) echo "one"
+#			2) echo "two" ;;
+#		esac
+#	Fix: add ';;' after each block unless fall-through is intended
+#
+# Not quoting variables (can break on spaces or special characters)
+#	eg)	case $var in
+#			hello world) echo "match" ;;
+#		esac
+#	Fix: always quote variables -> case "$var" in
+#	
+# Using '=' instead of pattern matching (case uses patterns, not comparisons like [ ])
+#	eg)	case "$var" = 1 in
+#	Fix: remove '=' and use proper syntax -> case "$var" in
+#
+# Placing the catch-all (*) option anywhere other than last
+#	eg)	case "$var" in
+#			*) echo "default" ;;
+#			1) echo "one" ;;
+#		esac
+#	Fix: move '*' to the end so specific matches are checked first
 #
 # Extra info:
 # --------------------
