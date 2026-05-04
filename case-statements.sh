@@ -18,11 +18,23 @@
 #		*) <- If the var is anything else, the star indicates 'else'
 #		  echo 'var equals something else'
 #		  ;;
-#	esac
+#	esac <- Closing statement
+#
+# Extra options
+#	*) catch-all, use at end for no matches
+#	?) use as a wildcard character; a?c) will match 'abc' or 'adc' but not 'axxc' 
+#	a|b) '|' acts as an 'or', so you can put multiple options for one outcome
+#
+#	;; 	- executes matched block and then exits the entire case statement
+#	;& 	- executes matched block and then runs the block for the next clause in the case statement
+#	;;& - executes matched block and then continues running the rest of the case statement
 #
 # When do we use them?
 # --------------------
-# 
+# You use case statments whenever you have a simple variable test
+# Basically, case statements are just clearer/more compact versions of a long list of if/else/elif statements
+# Good example: if you need to check if a variable is 1, 2, 3, 4, 5, etc.
+# Bad example: if you need to check if a variable is 1, 2, a, b, 7h, etc.
 #
 # Common mistakes:
 # --------------------
