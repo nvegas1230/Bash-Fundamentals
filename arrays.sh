@@ -40,6 +40,10 @@
 #		you can add elements to the array by assigning or appending
 #			eg) array_variable[location]="pizza pizza"
 #				array_variable+=([location]="pizza pizza")
+#		you can remove elements the same way as indexed arrays, except that the index
+#		is replaced by the element name
+#			eg) unset array_variable (clears the array)
+#				unset array_variable[job] (clears element associated with the key 'job')
 #		you can get elements the same way as indexed arrays, except that the index
 #		is replaced by the element name
 #			eg) echo ${array_variable[job]}
@@ -53,11 +57,30 @@
 #			
 # When do we use them?
 # --------------------
-# 
+# Whenever you need to store multiple values that are used for similar things, you
+# should use arrays
+# An example is when you are making a list for usernames or groceries
 #
 # Common mistakes:
 # --------------------
-# 
+# Arrays start at 0, not 1, which means that you could mistake the index
+#	eg) array=(1 2)
+#		echo ${array[1]}
+#			output -> 2
+#	Fix: subtract 1 from the index to get the desired element
+# Forgetting to put {} around the value
+#	eg) array=(1 2)
+#		echo $array[1]
+#			output -> 1[1]
+#	Fix: bash thinks that $array is equal to ${array[0]}, so you need the curly brackets
+#		 to tell it that you are trying to open the array
+# Trying to use an array with numbers, but bash thinks they are strings
+# Fix: use 'declare -ia array=(1 2 3)'
+#	   the -i flag will tell the array that it is only for integers
+#	   other flags are:
+#		-r (read-only)
+#		-l (lowercase)
+#		-u (uppercase)
 #
 # Extra info:
 # --------------------
