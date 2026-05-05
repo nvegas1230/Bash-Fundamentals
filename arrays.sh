@@ -114,6 +114,6 @@ echo ${fruit_array[@]}
 echo -e "\nChecking the new length of the array:"
 echo ${#fruit_array[@]}
 
-echo -e "\nRemoving any blanks in array and then re-checking length:"
-fruit_array=("${fruit_array[@]}")
+echo -e "\nRemoving blank in array and then re-checking length:"
+unset fruit_array[1]
 echo ${#fruit_array[@]}
