@@ -96,7 +96,7 @@ declare -a fruit_array=(apple banana grapes)
 echo -e "\nShowing one element:"
 echo ${fruit_array[0]}
 
-echo -e "\nShowing entire table:"
+echo -e "\nShowing entire array:"
 echo ${fruit_array[@]}
 
 echo -e "\nAdding an element ($input):"
@@ -117,3 +117,25 @@ echo ${#fruit_array[@]}
 echo -e "\nRemoving blank in array and then re-checking length:"
 unset fruit_array[1]
 echo ${#fruit_array[@]}
+
+echo -e "\n\nAssociative array demonstration: "
+read -p "Provide a salary: " input
+
+declare -A job_array=([job]=chef [restaurant]='pizza pizza')
+
+echo -e "\nShowing one element:"
+echo ${job_array[job]}
+
+echo -e "\nShowing entire array:"
+echo ${job_array[@]}
+
+echo -e "\nAdding an element ($input):"
+job_array+=([salary]=$input)
+echo ${job_array[@]}
+
+echo -e "\nRemoving restaurant:"
+unset job_array[restaurant]
+echo ${job_array[@]}
+
+echo -e "\nChecking the new length of the array:"
+echo ${#job_array[@]}
