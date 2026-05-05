@@ -22,8 +22,7 @@
 #			eg) unset array_variable (clears the array)
 #				unset array_variable[1] (clears element at index 1)
 #		there are some specific ways that could remove specific elements
-#			eg) my_array=( "${array_variable[@]/5/}" ) (removes  elements matching '5')
-#				my_array=("${my_array[@]}") (removes elements that are empty and rebuilds array)
+#			eg) my_array=("${array_variable[@]/5/}") (removes  elements matching '5', will make them blank)
 #		you can get elements from the array by their index or with @
 #			eg) echo ${array_variable[0]}
 #				output -> 10
@@ -107,3 +106,14 @@ echo ${fruit_array[@]}
 echo -e "\nRemoving 3rd index:"
 unset fruit_array[2]
 echo ${fruit_array[@]}
+
+echo -e "\nRemoving element 'banana' from array:"
+fruit_array=("${fruit_array[@]/banana/}")
+echo ${fruit_array[@]}
+
+echo -e "\nChecking the new length of the array:"
+echo ${#fruit_array[@]}
+
+echo -e "\nRemoving any blanks in array and then re-checking length:"
+fruit_array=("${fruit_array[@]}")
+echo ${#fruit_array[@]}
