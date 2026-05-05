@@ -94,7 +94,16 @@ read -p "Provide a fruit: " input
 
 declare -a fruit_array=(apple banana grapes)
 
-echo "Showing one element:"
+echo -e "\nShowing one element:"
 echo ${fruit_array[0]}
-echo "Showing entire table:"
+
+echo -e "\nShowing entire table:"
+echo ${fruit_array[@]}
+
+echo -e "\nAdding an element ($input):"
+fruit_array+=($input)
+echo ${fruit_array[@]}
+
+echo -e "\nRemoving 3rd index:"
+unset fruit_array[2]
 echo ${fruit_array[@]}
