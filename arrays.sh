@@ -88,3 +88,13 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo "Indexed array demonstration: "
+read -p "Provide a fruit: " input
+
+declare -a fruit_array=(apple banana grapes)
+
+echo "Showing one element:"
+echo ${fruit_array[0]}
+echo "Showing entire table:"
+echo ${fruit_array[@]}
