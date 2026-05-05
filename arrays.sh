@@ -9,7 +9,18 @@
 #
 # Types of arrays:
 # --------------------
-# 
+# There are two main types of arrays in bash
+#	Indexed arrays:
+#		you would create an indexed array by assigning it to a variable
+#			eg) array_variable=(10, 2, 5, "hi", 7)
+#		or by initializing it and then assigning to it later
+#			eg) declare -a array_variable
+#		you can get elements from the array by their index or with @
+#			eg) echo ${array_variable[0]}
+#				output -> 10
+#			eg) echo ${array_variable[@]}
+#				output -> 10 2 5 "hi" 7
+#	Associative arrays (dictionaries):
 #
 # When do we use them?
 # --------------------
