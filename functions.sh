@@ -11,7 +11,7 @@
 #	Builtin (predefined) functions:
 #		Functions that bash has built in to the language
 #		eg) echo, printf, cd, etc.
-#	Custom (user-defined) functions
+#	Custom (user-defined) functions:
 #		Functions that you make for yourself/scripts
 #		eg)	example_function() {
 #				:
@@ -20,7 +20,21 @@
 #			function example_function {
 #				:
 #			}
-# 
+# Different functions have different functional purposes
+#	Common functions:
+#		These functions are used to shorted/simplify your script by running
+#		commonly-used blocks of code
+#	Wrapper functions:
+#		These functions are used as a protective shell around other blocks of
+#		code
+#		If a function has a good chance of erroring or failing, or if you
+#		want your functions to all have some sort of common output handling,
+#		you should use a wrapper function
+# 	Recursive functions:
+#	Exported functions:
+#		When you use export -f <function>, you can ake a function available
+#		to subshells and child processes
+#	Nested functions
 #
 # When do we use them?
 # --------------------
