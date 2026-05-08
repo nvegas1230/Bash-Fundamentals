@@ -8,6 +8,8 @@ Documentation is extremely useful in any kind of topic, and I constantly refer t
 ## The purpose of using Git
 From a personal standpoint, Git is important to use for projects incase I break them and want to go back to a previous version. It also helps a lot when I want to do work from home, as I can just pull from the repo remotely and then push to the repo when I am finished. From a educational standpoint, Git is useful in order to monitor progress and check on students.
 ## Why git is useful/imporant in industry
-Git is extremely useful in industry because of monitoring progress, merging code, and version control.
+Git is extremely useful in industry because of monitoring progress, merging code, and version control. It allows multiple people to develop programs at the same time.
 ## Challenges I have faced and overcome
+A challenge I have faced is frequently commiting and pushing to Github, instead of just commiting after around an hour of work. I have overcome this, as I now commit after every 10-20 lines
 ## Challenges I currently face
+A challenge I currently face is dealing with distractions. I can focus and get down work when I really think it is necessary, but I often am sidetracked during work time.
