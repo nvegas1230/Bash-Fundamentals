@@ -54,3 +54,9 @@ echo "Username: ${username:-Guest}"
 read -p 'Input your name (or leave blank for default): ' new_username
 : ${new_username:=Guest}
 echo "Username: $new_username"
+
+echo -e '\nAlternate value demonstration'
+user1="Johnny"
+user2=""
+echo "user1: ${user1:+Variable exists}"
+echo "user2: ${user2:+Variable exists}"
