@@ -89,7 +89,7 @@ for fruit in apple banana orange; do
 	echo "$fruit"
 done
 
-echo -e 'Range-based for-loop demonstration'
+echo -e '\nRange-based for-loop demonstration'
 for number in {1..5}; do
 	echo "Number: $number"
 done
