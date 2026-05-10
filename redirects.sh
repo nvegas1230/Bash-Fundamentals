@@ -89,3 +89,13 @@ echo -e '\nAppend redirect demonstration'
 echo "First line" > example.txt
 echo "Second line" >> example.txt
 cat example.txt
+
+echo -e '\nRedirect to /dev/null demonstration'
+cat example.txt > /dev/null
+
+echo -e '\nHere-document demonstration'
+cat << END
+This is line 1
+This is line 2
+This is line 3
+END
