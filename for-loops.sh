@@ -41,8 +41,29 @@
 #
 # Common mistakes:
 # --------------------
-# 
-#
+# Forgetting the 'do' keyword
+#	eg) for i in 1 2 3
+#			echo "$i"
+#		done
+#	Fix: for i in 1 2 3; do
+#			echo "$i"
+#		done
+# Forgetting the 'done' keyword
+#	eg) for i in 1 2 3; do
+#			echo "$i"
+#	Fix: Close the loop using 'done'
+# Using commas in ranges
+#	eg) {1,5}
+#	Fix: Use two periods instead
+#		{1..5}
+# Forgetting quotes around variables with spaces
+#	eg) echo $file
+#	Fix: Wrap variables in quotes
+#		echo "$file"
+# Using single brackets instead of double parenthesis in C-style loops
+#	eg) for [ i=1; i<=5; i++ ]
+#	Fix: Use double parenthesis
+#		for (( i=1; i<=5; i++ ))
 # Extra info:
 # --------------------
 #
