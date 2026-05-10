@@ -88,4 +88,9 @@ hello_function() {
 }
 hello_function
 
-echo -e "\n"
+echo -e "\nFunctions with arguements demonstration"
+greet_user_function() {
+	echo "Hello, $1"
+}
+read -p "Enter your name: " username
+greet_user "$username"
