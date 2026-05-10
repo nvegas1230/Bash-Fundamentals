@@ -40,3 +40,6 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo 'Basic pipe demonstration'
+ls | grep .md
