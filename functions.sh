@@ -83,14 +83,21 @@
 # --------------------
 
 echo 'Basic function demonstration'
-hello_function() {
+basic_function() {
 	echo "Hello world!"
 }
-hello_function
+basic_function
 
 echo -e "\nFunctions with arguements demonstration"
 greet_user_function() {
 	echo "Hello, $1"
 }
 read -p "Enter your name: " username
-greet_user "$username"
+greet_user_function "$username"
+
+math_function() {
+	echo "$1 + $2 = $(($1 + $2))"
+}
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
+math_function "$num1" "$num2"
