@@ -55,18 +55,29 @@
 #		}
 #	Fix: add the function call underneath example_function
 # Forgetting to pass arguments into functions
-#	eg) greet() {
+#	eg) example_function() {
 #			echo "Hello $1"
 #		}
-#		greet
-#	Fix: pass an argument when calling the function eg) greet "John"
+#		example_function
+#	Fix: pass an argument when calling the function eg) example_function "John"
 # Using parenthesis when calling a function
-#	eg) greet()
+#	eg) example_function()
 #	Fix: only use parenthesis when defining the function
 #
 # Extra info:
 # --------------------
-# 
+# Functions can return an exit status using return
+#	eg) return 0 (A return value of 0 usually means success)
+# Variables inside functions are global unless you use local keyword
+# Functions can call other functions
+# For arguments, you would use $1, $2, $3, etc., and then call the function
+# with the arguements after the function
+#	eg) example_function "test"
+#       (then call the variable "test" with $1)
+# For any number past $9, you need to use curly brackets eg) ${10}
+# $# will tell you the amount of arguements given
+# $* and $@ will expand all arguements, but "$*" will turn them into one string,
+# and "$@" will turn them into seperate strings
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
