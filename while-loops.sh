@@ -104,3 +104,13 @@ while [ "$number" -le 0 ]; do
 	read -p "Enter a positive number: " number
 done
 echo "You entered $number"
+
+echo -e '\nFile-reading while-loop demonstration'
+touch example.txt
+echo "Line 1" > example.txt
+echo "Line 2" >> example.txt
+echo "Line 3" >> example.txt
+while read line; do
+	echo "Read from file: $line"
+done < example.txt
+rm example.txt
