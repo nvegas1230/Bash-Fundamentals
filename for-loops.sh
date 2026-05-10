@@ -79,7 +79,17 @@ for (( i=1; i<=5; i++ )); do
 	echo "Counter: $i"
 done
 
-echo -e '\nFile-based loop demonstration'
+echo -e '\nFile-based for-loop demonstration'
 for file in *.sh; do
 	echo "Shell script found: $file"
+done
+
+echo -e '\nBasic list-based for-loop demonstration'
+for fruit in apple banana orange; do
+	echo "$fruit"
+done
+
+echo -e 'Range-based for-loop demonstration'
+for number in {1..5}; do
+	echo "Number: $number"
 done
