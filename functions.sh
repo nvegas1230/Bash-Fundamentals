@@ -103,7 +103,7 @@ read -p "Enter second number: " num2
 math_function "$num1" "$num2"
 
 echo -e '\nWrapper function demonstration'
-safe_divide() {
+safe_divide_function() {
 	if [ "$2" -eq 0 ]; then
 		echo "Cannot divide by zero"
 	else
@@ -113,4 +113,15 @@ safe_divide() {
 echo "Dividing by zero normally:"
 echo "$((1 / 0))"
 echo "Dividing by zero with wrapper for safety:"
-safe_divide "1" "0"
+safe_divide_function "1" "0"
+
+echo -e '\nFunction return value demonstration'
+check_even_function() {
+	if [ $(($1 % 2)) -eq 0 ]; then
+		return 0
+	else
+		return 1
+	fi
+}
+read -p "Enter a number to check if it is even: " even_num
+check_even_function "$even_num"
