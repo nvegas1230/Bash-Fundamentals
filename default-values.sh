@@ -47,3 +47,10 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo 'Simple default value demonstration'
+unset username
+echo "Username: ${username:-Guest}"
+read -p 'Input your name (or leave blank for default): ' new_username
+: ${new_username:=Guest}
+echo "Username: $new_username"
