@@ -101,3 +101,16 @@ math_function() {
 read -p "Enter first number: " num1
 read -p "Enter second number: " num2
 math_function "$num1" "$num2"
+
+echo -e '\nWrapper function demonstration'
+safe_divide() {
+	if [ "$2" -eq 0 ]; then
+		echo "Cannot divide by zero"
+	else
+		echo "$1 / $2 = $(($1 / $2))"
+	fi
+}
+echo "Dividing by zero normally:"
+echo "$((1 / 0))"
+echo "Dividing by zero with wrapper for safety:"
+safe_divide "1" "0"
