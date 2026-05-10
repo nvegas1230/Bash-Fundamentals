@@ -60,3 +60,7 @@ user1="Johnny"
 user2=""
 echo "user1: ${user1:+Variable exists}"
 echo "user2: ${user2:+Variable exists}"
+
+echo -e '\nError-message default demonstration'
+required_var=""
+echo "${required_var:?Variable is missing}"
