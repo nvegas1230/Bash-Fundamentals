@@ -148,7 +148,7 @@ countdown_function() {
 		echo "Finished countdown"
 	else
 		echo "$1"
-		countdown $(($1 - 1))
+		countdown_function $(($1 - 1))
 	fi
 }
 read -p "Enter a number to countdown from: " count_num
