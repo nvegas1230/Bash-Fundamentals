@@ -51,7 +51,9 @@
 #
 # When do we use them?
 # --------------------
-# 
+# We use while-loops whenever code should continue running until a condition changes
+# They are useful for menus, input validation, counters, reading files, and long-running processes
+# They are especially useful when the amount of repetitions is unknown beforehand
 #
 # Common mistakes:
 # --------------------
