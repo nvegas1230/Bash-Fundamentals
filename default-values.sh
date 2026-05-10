@@ -24,11 +24,19 @@
 #
 # When do we use them?
 # --------------------
-# 
+# Default values are used for extra security in scripts incase a variable isnt filled
+# You would use one if you are sure that the variable has a chance to not be assigned to
 #
 # Common mistakes:
 # --------------------
-# 
+# Forgetting braces around variables
+#	eg) $username:-Guest
+#	Fix: Wrap the variable in braces
+#		${username:-Guest}
+# Confusing - with =
+#	eg) : ${username:-Guest}
+#	Fix: Use = if you want the variable itself to change
+#		: ${username:=Guest}
 #
 # Extra info:
 # --------------------
