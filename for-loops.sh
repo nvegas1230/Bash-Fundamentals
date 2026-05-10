@@ -66,7 +66,10 @@
 #		for (( i=1; i<=5; i++ ))
 # Extra info:
 # --------------------
-#
+# You can use break to stop a loop early
+# You can use continue to skip the current loop iteration
+# Loops can work together with conditionals
+# Variables created in loops can still exist outside the loop
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
