@@ -74,8 +74,18 @@
 # --------------------
 # Standard output (stdout) uses file descriptor 1
 # Standard error (stderr) uses file descriptor 2
-# Standard input (stdin) uses file descriptor 0
+# Standard input (stdin) uses file descriptor 0	
 # /dev/null is a special file that discards all data written to it
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo 'Output redirect demonstration'
+touch example.txt
+echo "Hello World" > example.txt
+cat example.txt
+
+echo -e '\nAppend redirect demonstration'
+echo "First line" > example.txt
+echo "Second line" >> example.txt
+cat example.txt
