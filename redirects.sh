@@ -72,9 +72,10 @@
 #
 # Extra info:
 # --------------------
-# Standard output (stdout) uses file descriptor 1
-# Standard error (stderr) uses file descriptor 2
-# Standard input (stdin) uses file descriptor 0	
+# Standard output (stdout) uses file descriptor 1 (1>)
+# Standard error (stderr) uses file descriptor 2 (2>)
+# Standard input (stdin) uses file descriptor 0	(0>)
+# You can combine those with 
 # /dev/null is a special file that discards all data written to it
 #
 # COMMANDS TO DEMONSTRATE:
@@ -99,3 +100,5 @@ This is line 1
 This is line 2
 This is line 3
 END
+
+rm example.txt
