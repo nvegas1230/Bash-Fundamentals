@@ -81,3 +81,11 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo 'Basic function demonstration'
+hello_function() {
+	echo "Hello world!"
+}
+hello_function
+
+echo -e "\n"
