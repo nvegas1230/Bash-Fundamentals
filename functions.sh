@@ -125,3 +125,8 @@ check_even_function() {
 }
 read -p "Enter a number to check if it is even: " even_num
 check_even_function "$even_num"
+if [ $? -eq 0 ]; then
+	echo "$even_num is even"
+else
+	echo "$even_num is odd"
+fi
