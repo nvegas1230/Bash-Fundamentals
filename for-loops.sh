@@ -36,7 +36,9 @@
 #
 # When do we use them?
 # --------------------
-# 
+# We use for-loops whenever we want to repeat code multiple times
+# They are especially useful when working with files, lists, ranges, or repeated calculations
+# They also help reduce repeating lines in code and make scripts cleaner
 #
 # Common mistakes:
 # --------------------
