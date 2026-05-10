@@ -97,3 +97,10 @@ while [ "$count" -le 5 ]; do
 	echo "Count: $count"
 	((count++))
 done
+
+echo -e '\nInput-validation while-loop demonstration'
+number=0
+while [ "$number" -le 0 ]; do
+	read -p "Enter a positive number: " number
+done
+echo "You entered $number"
