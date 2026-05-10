@@ -45,11 +45,30 @@
 #
 # When do we use them?
 # --------------------
-# 
+# We use redirects whenever we want to control where command input or output goes
 #
 # Common mistakes:
 # --------------------
-# 
+# Accidentally overwriting files with >
+#	eg) echo "New data" > important.txt
+#	Fix: Use >> if you want to add instead of overwrite
+#		echo "New data" >> important.txt
+# Forgetting spaces around redirects
+#	eg) echo "Hello">file.txt
+#	Fix: Add spaces for readability
+#		echo "Hello" > file.txt
+# Confusing > with >>
+#	eg) echo "Line 2" > file.txt
+#	Fix: Use >> to append instead of replacing contents
+#		echo "Line 2" >> file.txt
+# Redirecting only stdout but not stderr
+#	eg) ls fakefile > output.txt
+#	Fix: Redirect stderr separately if needed
+#		ls fakefile > output.txt 2> error.txt
+# Forgetting quotes around text with spaces
+#	eg) echo Hello World > file.txt
+#	Fix: Wrap strings in quotes
+#		echo "Hello World" > file.txt
 #
 # Extra info:
 # --------------------
