@@ -57,7 +57,32 @@
 #
 # Common mistakes:
 # --------------------
-# 
+# Forgetting to update the loop variable
+#	eg) count=1
+#		while [ "$count" -le 5 ]; do
+#			echo "$count"
+#		done
+#	Fix: count=1
+#		while [ "$count" -le 5 ]; do
+#			echo "$count"
+#			((count++))
+#		done
+# Forgetting the 'do' keyword
+#	eg) while [ "$count" -le 5 ]
+#			echo "$count"
+#		done
+#	Fix: while [ "$count" -le 5 ]; do
+#			echo "$count"
+#		done
+# Forgetting the 'done' keyword
+#	eg) while [ "$count" -le 5 ]; do
+#			echo "$count"
+#	Fix: Close the loop using 'done'
+#		done
+# Using single = instead of comparison operators
+#	eg) [ "$count" = 5 ]
+#	Fix: Use numeric comparison operators
+#		[ "$count" -eq 5 ]
 #
 # Extra info:
 # --------------------
