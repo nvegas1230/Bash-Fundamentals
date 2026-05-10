@@ -78,3 +78,8 @@ echo 'C-style for-loop demonstration'
 for (( i=1; i<=5; i++ )); do
 	echo "Counter: $i"
 done
+
+echo -e '\nFile-based loop demonstration'
+for file in *.sh; do
+	echo "Shell script found: $file"
+done
