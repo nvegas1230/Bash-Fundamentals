@@ -86,7 +86,14 @@
 #
 # Extra info:
 # --------------------
-# 
+# While loops are really useful for menus (like my cyberpatriot script)
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo 'Basic while-loop demonstration'
+count=1
+while [ "$count" -le 5 ]; do
+	echo "Count: $count"
+	((count++))
+done
