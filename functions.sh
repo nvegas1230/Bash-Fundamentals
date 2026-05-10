@@ -141,3 +141,15 @@ outer_function() {
 	inner_function
 }
 outer_function
+
+echo -e '\nRecursive function demonstration'
+countdown_function() {
+	if [ "$1" -le 0 ]; then
+		echo "Finished countdown"
+	else
+		echo "$1"
+		countdown $(($1 - 1))
+	fi
+}
+read -p "Enter a number to countdown from: " count_num
+countdown_function "$count_num"
