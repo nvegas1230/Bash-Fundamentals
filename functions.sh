@@ -88,7 +88,7 @@ basic_function() {
 }
 basic_function
 
-echo -e "\nFunctions with arguements demonstration"
+echo -e '\nFunctions with arguements demonstration'
 greet_user_function() {
 	echo "Hello, $1"
 }
@@ -110,9 +110,9 @@ safe_divide_function() {
 		echo "$1 / $2 = $(($1 / $2))"
 	fi
 }
-echo "Dividing by zero normally:"
+echo 'Dividing by zero normally:'
 echo "$((1 / 0))"
-echo "Dividing by zero with wrapper for safety:"
+echo 'Dividing by zero with wrapper for safety:'
 safe_divide_function "1" "0"
 
 echo -e '\nFunction return value demonstration'
@@ -123,10 +123,21 @@ check_even_function() {
 		return 1
 	fi
 }
-read -p "Enter a number to check if it is even: " even_num
+read -p 'Enter a number to check if it is even: ' even_num
 check_even_function "$even_num"
 if [ $? -eq 0 ]; then
 	echo "$even_num is even"
 else
 	echo "$even_num is odd"
 fi
+
+echo -e '\nNested function demonstration'
+outer_function() {
+	inner_function() {
+		echo "This is the inner function"
+	}
+
+	echo "This is the outer function"
+	inner_function
+}
+outer_function
