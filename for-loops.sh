@@ -73,3 +73,8 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo 'C-style for-loop demonstration'
+for (( i=1; i<=5; i++ )); do
+	echo "Counter: $i"
+done
