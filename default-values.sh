@@ -40,7 +40,10 @@
 #
 # Extra info:
 # --------------------
-# 
+# Unset variables do not exist at all
+# Empty variables exist, but contain no value
+# Default values are heavily used in shell scripting because scripts often rely on external input
+# Parameter expansion is the feature that allows default values to work
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
