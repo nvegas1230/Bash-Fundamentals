@@ -43,11 +43,26 @@
 #
 # When do we use them?
 # --------------------
-# 
+# You would use functions whenever you want to repeat a block of code without
+# having to re-type it every time
+# You would also use them if you want to make your code more readable#
 #
 # Common mistakes:
 # --------------------
-# 
+# Forgetting to call the function after defining it
+#	eg) example_function() {
+#			echo "Hello"
+#		}
+#	Fix: add the function call underneath example_function
+# Forgetting to pass arguments into functions
+#	eg) greet() {
+#			echo "Hello $1"
+#		}
+#		greet
+#	Fix: pass an argument when calling the function eg) greet "John"
+# Using parenthesis when calling a function
+#	eg) greet()
+#	Fix: only use parenthesis when defining the function
 #
 # Extra info:
 # --------------------
