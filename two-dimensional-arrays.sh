@@ -51,7 +51,10 @@
 #
 # Extra info:
 # --------------------
-# 
+# Bash arrays normally only support one dimension
+# Associative arrays are created with declare -A
+# Array indexes are usually stored as strings like row,column
+# Nested loops are commonly used to print 2D arrays
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
