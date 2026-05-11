@@ -27,11 +27,27 @@
 #
 # When do we use them?
 # --------------------
-# 
+# We use two dimensional arrays when working with things like
+# coordinates, grouping things, and anything that would need to be put
+# into one array
 #
 # Common mistakes:
 # --------------------
-# 
+# Forgetting to declare associative arrays
+#	eg) table[0,0]="A"
+#	Fix: Use declare -A first
+#		declare -A table
+# Mixing up row and column indexes
+#	eg) table[1,0] instead of table[0,1]
+#	Fix: Keep row,column order consistent
+# Forgetting quotes around values with spaces
+#	eg) table[0,0]=Hello World
+#	Fix: Wrap strings in quotes
+#		table[0,0]="Hello World"
+# Trying to use normal array syntax for 2D arrays
+#	eg) grid[0][1]="A"
+#	Fix: Use combined indexes
+#		grid[0,1]="A"
 #
 # Extra info:
 # --------------------
