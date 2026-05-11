@@ -69,3 +69,13 @@ echo 'Getting array in first array and then expanding:'
 for fruit in "${fruits[@]}"; do
 	echo "Processing: $fruit"
 done
+
+echo -e '\nFake coordinates array demonstration'
+declare -A grid
+grid[0,0]="A"
+grid[0,1]="B"
+grid[1,0]="C"
+grid[1,1]="D"
+echo "Printing specific values:"
+echo "0,0: ${grid[0,0]}"
+echo "1,1: ${grid[1,1]}"
