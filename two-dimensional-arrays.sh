@@ -63,7 +63,7 @@ echo "Arrays into strings demonstration"
 declare -A table
 string="apple orange banana grape"
 table[fruits]="$string"
-IFS=" " read -ra fruits <<< "${table[fruits]}"
+IFS=" " read -a fruits <<< "${table[fruits]}"
 echo "Normal array with string in it: ${table[fruits]}"
 echo 'Getting array in first array and then expanding:'
 for fruit in "${fruits[@]}"; do
