@@ -19,7 +19,7 @@
 #	its own array if you iterate through the values
 #	eg) declare -A table
 #		string="apple orange banana grape"
-#		table[fruits] = "$string"
+#		table[fruits]="$string"
 #		IFS=" " read -ra fruits <<< "${table[fruits]}"
 #		for fruit in "${fruits[@]}"; do
 # 			echo "Processing: $fruit"
@@ -58,3 +58,14 @@
 #
 # COMMANDS TO DEMONSTRATE:
 # --------------------
+
+echo "Arrays into strings demonstration"
+declare -A table
+string="apple orange banana grape"
+table[fruits]="$string"
+IFS=" " read -ra fruits <<< "${table[fruits]}"
+echo "Normal array with string in it: ${table[fruits]}"
+echo 'Getting array in first array and then expanding:'
+for fruit in "${fruits[@]}"; do
+	echo "Processing: $fruit"
+done
