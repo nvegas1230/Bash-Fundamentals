@@ -63,6 +63,9 @@ echo "Arrays into strings demonstration"
 declare -A table
 string="apple orange banana grape"
 table[fruits]="$string"
+# IFS is " " by default, but i am just showing it here for how you would change it
+# You could also put it on the line above the read command, as it is a shell variable
+# Unlike environment variables, it cannot be used by child processes unless exported
 IFS=" " read -a fruits <<< "${table[fruits]}"
 echo "Normal array with string in it: ${table[fruits]}"
 echo 'Getting array in first array and then expanding:'
